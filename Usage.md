@@ -11,13 +11,8 @@ you run the Event Viewer it will open the <em>nssm</em> executable, preventing
 you from overwriting it.  Keep this in mind if you come to upgrade
 <em>nssm</em>.</p>
 
-<p><em>Some features are labelled as supported as of a particular version.
-If the version described is newer than that available from the
-<a href="/download">download</a> page there may be a pre-release
-<a href="/builds">build</a> with the feature enabled.</em></p>
-
 <p><em>Equivalent command</em> examples below show the
-<a href="/commands">commands</a> which would configure an <em>existing</em>
+<a href="/commands.md">commands</a> which would configure an <em>existing</em>
 service to match the screenshots.  In many cases they represent the defaults
 for the parameters in question and are thus redundant.  Any parameter can
 also be reset to its default value with</p>
@@ -41,15 +36,14 @@ field is left blank the default startup directory will be the directory
 containing the application.  The <em>Arguments</em> field can be used to
 specify any commandline arguments to pass to the application.</p>
 
-<p>The screenshot below shows installation of a
-<a href="http://www.unrealtournament2003.com/">UT2003</a> server.  The command
+<p>The screenshot below shows installation of a UT2003 server.  The command
 to run such a service is <strong>ucc server</strong> so the full path
 to <strong>UCC.exe</strong> is entered under <em>Path</em> and
 <strong>server</strong> is entered under <em>Options</em>.</p>
 
 <p align="center"><img src="images/install_application.png" border=0></p>
 
-<p>Equivalent <a href="/commands">commands</a>:</p>
+<p>Equivalent <a href="/commands.md">commands</a>:</p>
 <pre class="code">nssm set UT2003 Application C:\games\ut2003\System\UCC.exe</pre>
 <pre class="code">nssm set UT2003 AppDirectory C:\games\ut2003\System</pre>
 <pre class="code">nssm set UT2003 AppParameters server</pre>
@@ -62,7 +56,7 @@ service.</p>
 
 <p align="center"><img src="images/install_details.png" border=0></p>
 
-<p>Equivalent <a href="/commands">commands</a>:</p>
+<p>Equivalent <a href="/commands.md">commands</a>:</p>
 <pre class="code">nssm set UT2003 DisplayName UT2k3</pre>
 <pre class="code">nssm set UT2003 Description Unreal Tournament 2003</pre>
 <pre class="code">nssm set UT2003 Start SERVICE_AUTO_START</pre>
@@ -74,11 +68,11 @@ you choose has the necessary <em>log on as a service</em> permissions.</p>
 
 <p align="center"><img src="images/install_logon.png" border=0></p>
 
-<p>Equivalent <a href="/commands">commands</a>:</p>
+<p>Equivalent <a href="/commands.md">commands</a>:</p>
 <pre class="code">nssm set UT2003 ObjectName LocalSystem</pre>
 <pre class="code">nssm set UT2003 Type SERVICE_WIN32_OWN_PROCESS</pre>
 
-<p>Refer to the <a href="/commands#exceptions">command line usage</a>
+<p>Refer to the <a href="/commands.md#exceptions">command line usage</a>
 documentation for details on configuring an account and password on the
 command line.  If you need to configure a blank password you <em>must</em>
 use the command line.</p>
@@ -93,7 +87,7 @@ symbol).</p>
 
 <p align="center"><img src="images/install_dependencies.png" border=0></p>
 
-<p>Equivalent <a href="/commands">commands</a>:</p>
+<p>Equivalent <a href="/commands.md">commands</a>:</p>
 <pre class="code">nssm set UT2003 DependOnService MpsSvc</pre>
 
 <h4>Process tab</h4>
@@ -108,7 +102,7 @@ manager while the service is running.</p>
 
 <p align="center"><img src="images/install_process.png" border=0></p>
 
-<p>Equivalent <a href="/commands">commands</a>:</p>
+<p>Equivalent <a href="/commands.md">commands</a>:</p>
 <pre class="code">nssm set UT2003 AppPriority NORMAL_PRIORITY_CLASS</pre>
 <pre class="code">nssm set UT2003 AppNoConsole 0</pre>
 <pre class="code">nssm set UT2003 AppAffinity All</pre>
@@ -120,7 +114,7 @@ service is gracefully stopped.</p>
 
 <p align="center"><img src="images/install_shutdown.png" border=0></p>
 
-<p>Equivalent <a href="/commands">commands</a>:</p>
+<p>Equivalent <a href="/commands.md">commands</a>:</p>
 <pre class="code">nssm set UT2003 AppStopMethodSkip 0</pre>
 <pre class="code">nssm set UT2003 AppStopMethodConsole 1500</pre>
 <pre class="code">nssm set UT2003 AppStopMethodWindow 1500</pre>
@@ -138,7 +132,7 @@ the registry as described <a href="#exit">below</a>.</p>
 
 <p align="center"><img src="images/install_exitactions.png" border=0></p>
 
-<p>Equivalent <a href="/commands">commands</a>:</p>
+<p>Equivalent <a href="/commands.md">commands</a>:</p>
 <pre class="code">nssm set UT2003 AppThrottle 1500</pre>
 <pre class="code">nssm set UT2003 AppExit Default Restart</pre>
 <pre class="code">nssm set UT2003 AppRestartDelay 0</pre>
@@ -154,7 +148,7 @@ control over paths and access modes.</p>
 
 <p align="center"><img src="images/install_io.png" border=0></p>
 
-<p>Equivalent <a href="/commands">commands</a>:</p>
+<p>Equivalent <a href="/commands.md">commands</a>:</p>
 <pre class="code">nssm set UT2003 AppStdout C:\games\ut2003\service.log</pre>
 <pre class="code">nssm set UT2003 AppStderr C:\games\ut2003\service.log</pre>
 
@@ -181,7 +175,7 @@ necessarily leads to increased risk of failure.</p>
 
 <p align="center"><img src="images/install_rotation.png" border=0></p>
 
-<p>Equivalent <a href="/commands">commands</a>:</p>
+<p>Equivalent <a href="/commands.md">commands</a>:</p>
 <pre class="code">nssm set UT2003 AppStdoutCreationDisposition 4</pre>
 <pre class="code">nssm set UT2003 AppStderrCreationDisposition 4</pre>
 <pre class="code">nssm set UT2003 AppRotateFiles 1</pre>
@@ -199,7 +193,7 @@ preserved.</p>
 
 <p align="center"><img src="images/install_environment.png" border=0></p>
 
-<p>Equivalent <a href="/commands">commands</a>:</p>
+<p>Equivalent <a href="/commands.md">commands</a>:</p>
 <pre class="code">nssm set &lt;servicename&gt; AppEnvironmentExtra JAVA_HOME=C:\java</pre>
 
 <h4>Installing from the command line</h4>

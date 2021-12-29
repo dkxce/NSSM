@@ -13,7 +13,7 @@ NSSM also has a graphical service installer and remover.
 This is a fork of [NSSM](https://nssm.cc/)    
 Binary files you can find [in releases here](https://github.com/dkxce/NSSM/releases)     
 Original code: https://git.nssm.cc/nssm/nssm by [Iain Patterson](https://git.nssm.cc/iain)    
-How to use: [Usage.md](Usage.md)
+Documentation: [Usage](Usage.md), [Commands](commands.md)    
 
 Usage
 -----

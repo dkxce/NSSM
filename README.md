@@ -1,21 +1,20 @@
-# The Non-Sucking Service Manager
+# NSSM: The Non-Sucking Service Manager
 
-This is a fork of [NSSM](https://nssm.cc/)    
-Binary files at [Releases](https://github.com/dkxce/NSSM/releases)     
-Original source code: https://git.nssm.cc/nssm/nssm   
-
-NSSM: The Non-Sucking Service Manager
-Version 2.25
+### Version 2.25    
 
 NSSM is a service helper program similar to srvany and cygrunsrv.  It can 
-start any application as an NT service and will restart the service if it 
-fails for any reason.
+start any application (such as console) as an NT service and will restart 
+the service if it fails for any reason.
 
 NSSM also has a graphical service installer and remover.
 
-Full documentation can be found online at
+### About
 
-http://nssm.cc/
+This is a fork of [NSSM](https://nssm.cc/)    
+Binary files you can find [in releases here](https://github.com/dkxce/NSSM/releases)     
+Original code: https://git.nssm.cc/nssm/nssm by [Iain Patterson](https://git.nssm.cc/iain)
+
+Full documentation can be found online at [nssm.cc](http://nssm.cc/)
 
 Usage
 -----

@@ -50,9 +50,9 @@ identify a service.</p>
 <pre class="code">nssm rotate &lt;servicename&gt;</pre>
 
 <p><code>nssm rotate</code> triggers
-<a href="/usage#ondemand_rotation">on-demand rotation</a> for <em>nssm</em>
-services with <a href="/usage#io">I/O redirection</a> and
-<a href="/usage#online_rotation">online rotation</a> enabled.  <em>nssm</em>
+<a href="/Usage.md#ondemand_rotation">on-demand rotation</a> for <em>nssm</em>
+services with <a href="/Usage.md#io">I/O redirection</a> and
+<a href="/Usage.md#online_rotation">online rotation</a> enabled.  <em>nssm</em>
 accepts user-defined control 128 as a cue to begin output file rotation.
 Non-<em>nssm</em> services might respond to control 128 in their own way (or
 ignore it, or crash).</p>
@@ -102,8 +102,8 @@ the following command sets the startup directory for a service:</p>
 
 <h4>Values</h4>
 <p>Most parameters are configured by setting the same value as is
-<a href="/usage">documented</a> for the associated registry entry.  To enable
-<a href="/usage#rotation">file rotation</a>, for example, you would use the
+<a href="/Usage.md">documented</a> for the associated registry entry.  To enable
+<a href="/Usage.md#rotation">file rotation</a>, for example, you would use the
 following command:</p>
 
 <pre class="code">nssm set &lt;servicename&gt; AppRotation <strong>1</strong></pre>
@@ -143,7 +143,7 @@ services of type <code>SERVICE_WIN32_OWN_PROCESS</code>.</p></li>
 <h4>Non-standard parameters</h4>
 <ul>
 <li><p>When used with <code>nssm get</code>,
-<strong><a href="/usage#environment">AppEnvironment</a></strong> and
+<strong><a href="/Usage.md#environment">AppEnvironment</a></strong> and
 <strong>AppEnvironmentExtra</strong> accept an optional subparameter.  If no
 subparameter is given, <code>nssm get</code> will print all configured
 environment variables, one per line in the form <em>KEY=VALUE</em>.  If a
@@ -176,7 +176,7 @@ example:</p>
 
 <pre class="code">nssm set &lt;servicename&gt; AppEnvironmentExtra <strong>CLASSPATH=C:\Classes TEMP=C:\Temp</strong></pre></li>
 
-<li><p>The <strong><a href="/usage#exit">AppExit</a></strong> parameter requires
+<li><p>The <strong><a href="/Usage.md#exit">AppExit</a></strong> parameter requires
 a subparameter specifying the exit code to get or set.  The default action can
 be specified with the string <em>Default</em>.</p>
 
@@ -196,7 +196,7 @@ code of 2, run:</p>
 
 <pre class="code">nssm set &lt;servicename&gt; AppExit 2 <strong>Exit</strong></pre></li>
 
-<li><p>The <strong><a href="/usage#process">AppPriority</a></strong> parameter
+<li><p>The <strong><a href="/Usage.md#process">AppPriority</a></strong> parameter
 takes a priority class constant as specified in the
 <code>SetPriorityClass()</code> documentation.  Valid priorities are:</p>
 <ul>
